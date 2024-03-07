@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{newtxtext}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, physics}
+\theoremstyle{definition}
+\usepackage{datetime}
+\title{Introductory Functional Analysis \\ Chapter 1 Exercises}
+
+\date{Last Updated: \today}
+\author{Top Maths}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{observation}{Observation}
+
+
+\begin{document}
+	\maketitle 
+	
+	\noindent \textbf{1.1.} Prove the reverse triangle inequality: For vectors $x$ and $y$ in any normed linear space, $$\norm{x + y} \geq \abs{\norm{x} - \norm{y}}.$$
+		\begin{proof}
+			Without loss of generality, suppose $\norm{x} \geq \norm{y}$; it suffices to show that $$\norm{y} - \norm{x} \leq \norm{x + y} \leq \norm{x} - \norm{y},$$ because for $\alpha, \beta \in \mathbb{R}$, $|\alpha| \leq |\beta|$ if and only if $$-|\beta| \leq \alpha \leq |\beta|.$$ Assuming that $\norm{x} \geq \norm{y}$ is like assuming $\beta \geq 0$ in the above, so that we can remove the absolute value signs. Now, $$\norm{y} - \norm{x} = \norm{x + y - x} - \norm{x} \leq \norm{x + y} + \norm{x} - \norm{x} = \norm{x + y}$$ giving the left-side inequality. For the right-side inequality, we have 
+			$$\norm{x} - \norm{y} - \norm{x + y} \geq \norm{x + y - x} - \norm{y} = \norm{y} - \norm{y} = 0$$ so we get that $\norm{x} - \norm{y} \geq \norm{x + y}$ and the result follows. 
+		\end{proof}
+	
+	\noindent \textbf{1.2.} Show that $C[0, 1]$ is a Banach space in the supremum norm. Hint: if $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$, then for each fixed $x \in [0, 1]$, $\{f_n(x)\}$ is a Cauchy sequence in $\mathbb{C}$, which is complete.
+		\begin{proof}
+			Suppose $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$. That means, for all $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for $n, m \geq N$ we have $$\norm{f_n - f_m} = \max_{x \in [0, 1]}|f_n(x) - f_m(x)| < \varepsilon.$$ We also get that, for $m, n \geq N$, for all $a \in [0, 1]$,  $$|f_n(a) - f_m(a)| \leq \max_{x \in [0, 1]} |f_n(x) - f_m(x)| < \varepsilon.$$ In particular, since $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$, $\{f_n(a)\}$ is a Cauchy sequence in $\mathbb{C}$ for all $a \in [0, 1]$. Since $\mathbb{C}$ is complete, $\{f_n(a)\}$ converges (because it is Cauchy) for all $a \in [0, 1]$. For each $a \in [0, 1]$, define $$f(a) := \lim_{n \to \infty} f_n(a).$$ 
+		\end{proof} 
+	
+	\noindent \textbf{1.3.} Let $C^1[0, 1]$ be the space of continuous, complex-valued functions on $[0, 1]$ with continuous first derivative. Show that the supremum norm $\norm{\cdot}_\infty$, $C^1[0, 1]$ is not a Banach space, but that in the norm defined by $\norm{f} = \norm{f}_\infty + \norm{f'}_\infty$ it does become a Banach space. 
+	
+	\noindent \textbf{1.4.} Show that the space $\ell^1$ of Example 1.5 is complete. 
+
+\end{document}
