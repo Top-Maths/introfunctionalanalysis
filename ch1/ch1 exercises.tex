@@ -24,12 +24,27 @@
 			$$\norm{x} - \norm{y} - \norm{x + y} \geq \norm{x + y - x} - \norm{y} = \norm{y} - \norm{y} = 0$$ so we get that $\norm{x} - \norm{y} \geq \norm{x + y}$ and the result follows. 
 		\end{proof}
 	
+	\newpage 
 	\noindent \textbf{1.2.} Show that $C[0, 1]$ is a Banach space in the supremum norm. Hint: if $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$, then for each fixed $x \in [0, 1]$, $\{f_n(x)\}$ is a Cauchy sequence in $\mathbb{C}$, which is complete.
 		\begin{proof}
-			Suppose $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$. That means, for all $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for $n, m \geq N$ we have $$\norm{f_n - f_m} = \max_{x \in [0, 1]}|f_n(x) - f_m(x)| < \varepsilon.$$ We also get that, for $m, n \geq N$, for all $a \in [0, 1]$,  $$|f_n(a) - f_m(a)| \leq \max_{x \in [0, 1]} |f_n(x) - f_m(x)| < \varepsilon.$$ In particular, since $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$, $\{f_n(a)\}$ is a Cauchy sequence in $\mathbb{C}$ for all $a \in [0, 1]$. Since $\mathbb{C}$ is complete, $\{f_n(a)\}$ converges (because it is Cauchy) for all $a \in [0, 1]$. For each $a \in [0, 1]$, define $$f(a) := \lim_{n \to \infty} f_n(a).$$ 
+			Suppose $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$. That means, for all $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for $n, m \geq N$ we have $$\norm{f_n - f_m} = \sup_{x \in [0, 1]}|f_n(x) - f_m(x)| < \varepsilon.$$ We also get that, for $m, n \geq N$, for all $a \in [0, 1]$,  \begin{equation} |f_n(a) - f_m(a)| \leq \sup_{x \in [0, 1]} |f_n(x) - f_m(x)| < \varepsilon.\end{equation} In particular, since $\{f_n\}$ is a Cauchy sequence in $C[0, 1]$, $\{f_n(a)\}$ is a Cauchy sequence in $\mathbb{C}$ for all $a \in [0, 1]$. Since $\mathbb{C}$ is complete, $\{f_n(a)\}$ converges (because it is Cauchy) for all $a \in [0, 1]$. For each $a \in [0, 1]$, define $$f(a) := \lim_{n \to \infty} f_n(a).$$ Considering (1) again , we have by the continuity of $|\cdot|$,  $$\lim_{m \to \infty} |f_n(a) - f_m(a)| = |f_n(a) - \lim_{m \to \infty} f_m(a)| = |f_n(a) - f(a)| < \varepsilon.$$ Since this $\varepsilon$ is independent of our choice of $a \in [0, 1]$, it follows that $$\sup |f_n(a) - f(a)| = \norm{f_n - f} < \varepsilon$$ giving that $f_n \to f$ in $C[0, 1]$. To establish the continuity of $f$, pick $a \in [0, 1]$ and let $\varepsilon > 0$ arbitrary. Since each $f_n$ is continuous, there exists $\delta > 0$ such that $$|x - a| < \delta \implies |f_n(x) - f_n(a)| < \frac{\varepsilon}{3}.$$ Also, pick $n$ large enough so that  $$\sup_{p \in [0, 1]}|f_n(p) - f(p)| < \frac{\varepsilon}{3}.$$ Then,
+				\begin{align*}
+					|f(x) - f(a)| &= |f(x) - f(a) + f_n(x) - f_n(x) + f_n(a) - f_n(a)| \\
+					&= |f(x) - f_n(x) + f_n(x) - f_n(a) +f_n(a) - f(a)| \\
+					&\leq |f(x) - f_n(x)| + \underbrace{|f_n(x) - f_n(a)|}_{< \varepsilon/3} + |f_n(a) - f(a)| \\
+					&\leq \norm{f - f_n} + \frac{\varepsilon}{3} + \norm{f_n - f} \\
+					&\leq \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon.
+				\end{align*}
 		\end{proof} 
 	
-	\noindent \textbf{1.3.} Let $C^1[0, 1]$ be the space of continuous, complex-valued functions on $[0, 1]$ with continuous first derivative. Show that the supremum norm $\norm{\cdot}_\infty$, $C^1[0, 1]$ is not a Banach space, but that in the norm defined by $\norm{f} = \norm{f}_\infty + \norm{f'}_\infty$ it does become a Banach space. 
+	\noindent \textbf{1.3.} Let $C^1[0, 1]$ be the space of continuous, complex-valued functions on $[0, 1]$ with continuous first derivative. Show that with the supremum norm $\norm{\cdot}_\infty$, $C^1[0, 1]$ is not a Banach space, but that in the norm defined by $\norm{f} = \norm{f}_\infty + \norm{f'}_\infty$ it does become a Banach space. 
+		\begin{proof}
+			Let $\{f_n\}_{n \in \mathbb{N}} \subseteq C^1[0, 1]$ be defined by $$f_n(x) = \sqrt{x + \frac{1}{n}} \qquad (x \in [0, 1]).$$ Observe that $\sqrt{x}$ is uniformly continuous\footnote{Continuous functions on compact sets, such as $[0, 1]$ in question here, are always uniformly continuous} on $[0, 1]$, and so for all $\varepsilon > 0$ there exists $\delta > 0$ such that for any two points $p_1, p_2 \in [0, 1]$, $$|p_1 - p_2| < \delta \implies |f(p_1) - f(p_2)| < \varepsilon.$$  Take $p_1 = x + 1/n$ and $p_2 = x$, then the uniform continuity condition yields $$\frac{1}{n} < \delta \implies \abs{\sqrt{x + 1/n} - \sqrt{x}} < \varepsilon.$$ There exists $N \in \mathbb{N}$ large enough so that $1/n < \delta$, and so there exists $n \in \mathbb{N}$ large enough so that $$\abs{\sqrt{x + 1/n} - \sqrt{x}} < \varepsilon.$$ Since this $\varepsilon$ comes from the uniform continuity condition, it is independent of the choice of $x$, as is $N$, and therefore there exists $N \in \mathbb{N}$ such that for $n \geq N$, $$\sup_{x \in [0, 1]} \abs{\sqrt{x + 1/n} - \sqrt{x}} < \varepsilon.$$ While $\sqrt{x + 1/n}$ converges to $\sqrt{x}$ in the supremum norm, we find that $\sqrt{x} \notin C^1[0, 1]$ because the derivative of $\sqrt{x}$: $$\frac{d}{dx} \sqrt{x} = \frac{1}{2 \sqrt{x}}$$ is not differentiable at 0, and hence $(C^1[0, 1], \norm{\cdot}_\infty)$ is not a Banach space. 
+			
+			
+			
+			We'll consider the new norm $\norm{\cdot}$ as defined above. Suppose $\{f_n\}_{n \in \mathbb{N}}$ is a Cauchy sequence in $(C^1[0, 1], \norm{\cdot})$. 
+		\end{proof}
 	
 	\noindent \textbf{1.4.} Show that the space $\ell^1$ of Example 1.5 is complete. 
 
