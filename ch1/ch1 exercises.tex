@@ -43,9 +43,13 @@
 			
 			
 			
-			We'll consider the new norm $\norm{\cdot}$ as defined above. Suppose $\{f_n\}_{n \in \mathbb{N}}$ is a Cauchy sequence in $(C^1[0, 1], \norm{\cdot})$. So,  
+			We'll consider the new norm $\norm{\cdot}$ as defined above. Suppose $\{f_n\}_{n \in \mathbb{N}}$ is a Cauchy sequence in $(C^1[0, 1], \norm{\cdot})$. And so for all $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for $m,n \geq N$, $$\norm{f_n - f_m} = \norm{f_n - f_m}_\infty + \norm{f_n' - f_m'}_\infty < \varepsilon.$$ It follows immediately that $\{f_n\}_{n \in \mathbb{N}}$ and $\{f_n'\}_{n \in \mathbb{N}}$ are a Cauchy sequences in $C[0,1]$, and from our previous work we know $\lim_{n \to \infty} f_n = f$ and $\lim_{n \to \infty} f_n' = g$, where $$f(x) := \lim_{n \to \infty} f_n(x), \qquad g(x) := \lim_{n \to \infty} f_n'(x)$$ for all $x \in [0, 1]$. In fact, since this convergence is in the sup-norm, it follows\footnote{See \textit{Principles of Mathematical Analysis} (PMA) by Walter Rudin, 3rd Edition, Theorem 7.9 on p. 148} that $\{f_n\}_{n \in \mathbb{N}}$ uniformly converges to $f$ and $\{f_n'\}_{n \in \mathbb{N}}$ uniformly converges to $g$. But, we now have the conditions acquired\footnote{See PMA, Theorem 7.17, p. 152} to say that $$g(x) = f'(x) = \lim_{n \to \infty} f'(x).$$ Therefore, $$\lim_{n \to \infty} \norm{f_n - f} = \lim_{n \to \infty} \norm{f_n - f}_\infty + \lim_{n \to \infty} \norm{f_n' - f'}_\infty = 0.$$ Hence, $C^1[0,1]$ is complete under this new norm. 
 		\end{proof}
 	
+	\newpage 
 	\noindent \textbf{1.4.} Show that the space $\ell^1$ of Example 1.5 is complete. 
+		\begin{proof}
+			
+		\end{proof} 
 
 \end{document}
