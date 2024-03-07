@@ -36,7 +36,7 @@
 					&\leq \frac{\varepsilon}{3} + \frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon.
 				\end{align*}
 		\end{proof} 
-	
+	\newpage 
 	\noindent \textbf{1.3.} Let $C^1[0, 1]$ be the space of continuous, complex-valued functions on $[0, 1]$ with continuous first derivative. Show that with the supremum norm $\norm{\cdot}_\infty$, $C^1[0, 1]$ is not a Banach space, but that in the norm defined by $\norm{f} = \norm{f}_\infty + \norm{f'}_\infty$ it does become a Banach space. 
 		\begin{proof}
 			Let $\{f_n\}_{n \in \mathbb{N}} \subseteq C^1[0, 1]$ be defined by $$f_n(x) = \sqrt{x + \frac{1}{n}} \qquad (x \in [0, 1]).$$ Observe that $\sqrt{x}$ is uniformly continuous\footnote{Continuous functions on compact sets, such as $[0, 1]$ in question here, are always uniformly continuous} on $[0, 1]$, and so for all $\varepsilon > 0$ there exists $\delta > 0$ such that for any two points $p_1, p_2 \in [0, 1]$, $$|p_1 - p_2| < \delta \implies |f(p_1) - f(p_2)| < \varepsilon.$$  Take $p_1 = x + 1/n$ and $p_2 = x$, then the uniform continuity condition yields $$\frac{1}{n} < \delta \implies \abs{\sqrt{x + 1/n} - \sqrt{x}} < \varepsilon.$$ There exists $N \in \mathbb{N}$ large enough so that $1/n < \delta$, and so there exists $n \in \mathbb{N}$ large enough so that $$\abs{\sqrt{x + 1/n} - \sqrt{x}} < \varepsilon.$$ Since this $\varepsilon$ comes from the uniform continuity condition, it is independent of the choice of $x$, as is $N$, and therefore there exists $N \in \mathbb{N}$ such that for $n \geq N$, $$\sup_{x \in [0, 1]} \abs{\sqrt{x + 1/n} - \sqrt{x}} < \varepsilon.$$ While $\sqrt{x + 1/n}$ converges to $\sqrt{x}$ in the supremum norm, we find that $\sqrt{x} \notin C^1[0, 1]$ because the derivative of $\sqrt{x}$: $$\frac{d}{dx} \sqrt{x} = \frac{1}{2 \sqrt{x}}$$ is not differentiable at 0, and hence $(C^1[0, 1], \norm{\cdot}_\infty)$ is not a Banach space. 
@@ -49,7 +49,8 @@
 	\newpage 
 	\noindent \textbf{1.4.} Show that the space $\ell^1$ of Example 1.5 is complete. 
 		\begin{proof}
-			
+			Writing down the definition of $\ell^1$ for convenience, we have:
+				$$\ell^1 = \left\{\{a_n\}_{n \in \mathbb{N}} \subseteq \mathbb{C} : \norm{\{a_n\}}_1 = \sum_{n = 1}^\infty |a_n| < \infty \right\}.$$ 
 		\end{proof} 
 
 \end{document}
