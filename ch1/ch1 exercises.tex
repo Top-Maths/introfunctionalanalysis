@@ -18,10 +18,9 @@
 \begin{document}
 	\maketitle 
 	
-	\noindent \textbf{1.1.} Prove the reverse triangle inequality: For vectors $x$ and $y$ in any normed linear space, $$\norm{x + y} \geq \abs{\norm{x} - \norm{y}}.$$
+	\noindent \textbf{1.1.} Prove\footnote{There is a typo in the book. The reverse triangle inequality is as I stated here.} the reverse triangle inequality: For vectors $x$ and $y$ in any normed linear space, $$\norm{x - y} \geq \abs{\norm{x} - \norm{y}}.$$
 		\begin{proof}
-			Without loss of generality, suppose $\norm{x} \geq \norm{y}$; it suffices to show that $$\norm{y} - \norm{x} \leq \norm{x + y} \leq \norm{x} - \norm{y},$$ because for $\alpha, \beta \in \mathbb{R}$, $|\alpha| \leq |\beta|$ if and only if $$-|\beta| \leq \alpha \leq |\beta|.$$ Assuming that $\norm{x} \geq \norm{y}$ is like assuming $\beta \geq 0$ in the above, so that we can remove the absolute value signs. Now, $$\norm{y} - \norm{x} = \norm{x + y - x} - \norm{x} \leq \norm{x + y} + \norm{x} - \norm{x} = \norm{x + y}$$ giving the left-side inequality. For the right-side inequality, we have 
-			$$\norm{x} - \norm{y} - \norm{x + y} \geq \norm{x + y - x} - \norm{y} = \norm{y} - \norm{y} = 0$$ so we get that $\norm{x} - \norm{y} \geq \norm{x + y}$ and the result follows. 
+			
 		\end{proof}
 	
 	\newpage 
@@ -51,6 +50,18 @@
 		\begin{proof}
 			Writing down the definition of $\ell^1$ for convenience, we have:
 				$$\ell^1 = \left\{\{a_n\}_{n \in \mathbb{N}} \subseteq \mathbb{C} : \norm{\{a_n\}}_1 = \sum_{n = 1}^\infty |a_n| < \infty \right\}.$$ 
+			Let $\{\{a_m^n\}_{m \in \mathbb{N}}\}_{n \in \mathbb{N}}$ be a notations nightmare, but also let it be a Cauchy sequence in $\ell^1$, and so for all $\varepsilon > 0$ there exists $N \in \mathbb{N}$ such that for $k, \ell \geq N$, $$\norm{\{a_n^\ell\} - \{a_n^k\}} =  \norm{\{a_n^\ell - a_n^k\}} = \sum_{n = 1}^\infty |a_n^\ell - a_n^k| < \varepsilon.$$ For a fixed $n^\ast$, we have $$|a_{n^\ast}^\ell - a_{n^\ast}^k| < \sum_{n = 1}^\infty |a_n^\ell - a_n^k| < \varepsilon$$ and so, for each fixed $n^\ast \in \mathbb{N}$, $$\{a_{n^\ast}^\ell\}_{\ell \in \mathbb{N} }$$ is a Cauchy sequence in $\mathbb{C}$. For all $n \in \mathbb{N}$, let $\{a_n\}_{n \in \mathbb{N}}$ be the sequence defined by $$a_n = \lim_{\ell \to \infty} a_n^\ell$$ for all $n \in \mathbb{N}.$ First, we check that $\sum |a_n| < \infty$. We have,
+				\begin{align*}
+					\sum_{n = 1}^\infty |a_n| &= \lim_{\ell \to \infty}\sum_{n = 1}^\infty |a_n^\ell| 
+				\end{align*} 
+			Is this limit finite? In terms of the reverse triangle inequality for norms, we have, $$\abs{\sum_{n = 1}^\infty |a_n^\ell| - \sum_{n = 1}^\infty |a_n^k|} \leq \sum_{n = 1}^\infty |a_n^\ell - a_n^k| < \infty$$ by our Cauchy condition we obtained earlier. This result gives that the sequence of sums $$\left\{\sum_{n = 1}^\infty |a_n^\ell|\right\}_{\ell \in \mathbb{N}}$$ is a Cauchy sequence of complex numbers, and therefore converges. Hence, $\{a_n\}_{n \in \mathbb{N}} \in \ell^1$. Now, to prove $\lim_{\ell \to \infty} \{a_n^\ell\}_{n \in \mathbb{N}} = \{a_n\}_{n \in \mathbb{N}}$, we have
+				\begin{align*}
+					\lim_{\ell \to \infty} \norm{\{a_n^\ell\} - \{a_n\}}_1 &= \sum_{n = 1}^\infty |a_n^\ell - a_n| \\
+					&= \sum_{n = 1}^\infty |\lim_{\ell \to \infty} a_n^\ell - a_n| \\
+					&= 0.
+				\end{align*}
+			We have shown $\ell^1$ is complete, as desired. 
 		\end{proof} 
 
+\noindent \textbf{1.5.} Show that a metric space is complete if every Cauchy sequence has a convergent subsequence. 
 \end{document}
