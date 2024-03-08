@@ -64,4 +64,15 @@
 		\end{proof} 
 
 \noindent \textbf{1.5.} Show that a metric space is complete if every Cauchy sequence has a convergent subsequence. 
+	\begin{proof}
+		Let $(X, d)$ be a metric space having the property that every Cauchy sequence in $X$ has a convergent subsequence. Given any sequence $\{x_n\}_{n \in \mathbb{N}}$ in $X$, let $\{x_{n_j}\}_{j \in \mathbb{N}}$ be a convergent subsequence to $x \in X$. Since $\{x_n\}_{n \in \mathbb{N}}$ is Cauchy, there exists $N_1 \in \mathbb{N}$ such that for $j, m \geq N_1$, $$d(x_m, x_{n_j}) < \frac{\varepsilon}{2}.$$ Moreover, by the fact $\lim_{j \to \infty} x_{n_j} = x$, there exists $N_2 \in \mathbb{N}$ such that for $j \geq N_2$, $$|x_{n_j} - x| < \frac{\varepsilon}{2}.$$ Take $N = \max\{N_1, N_2\}$, and therefore for $n, j \geq N$, 
+		 $$d(x_n, x) \leq d(x_n, x_{n_j}) + d(x_{n_j}, x) < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.$$ Hence, $\lim_{n \to \infty} x_n = x$ and we conclude that $(X, d)$ is complete.
+	\end{proof} 
+	
+\noindent \textbf{1.6.} Assume that you now Minkowski's inequality $$\left(\sum_{n = 1}^\infty |a_j + b_j|^2\right)^{1/2} \leq \left(\sum_{n = 1}^\infty |a_j|^2\right)^{1/2} + \left(\sum_{n = 1}^\infty |b_j|^2\right)^{1/2}$$ for $\mathbb{C}^n$ in the Euclidean norm. 
+	\begin{itemize}
+		\item[(a)] Show that for $\{a_n\}$ and $\{b_n\}$ in a weighted sequence space $\ell_\beta^2$, $$\left(\sum_{j = 0}^\infty |a_j + b_j|^2 \beta(j)^2\right)^{1/2} \leq \left(\sum_{j = 0}^\infty |a_j|^2 \beta(j)^2 \right)^{1/2} + \left(\sum_{j = 0}^\infty |b_j|^2 \beta(j)^2\right)^{1/2}$$ 
+		
+		\item[(b)]
+	\end{itemize}
 \end{document}

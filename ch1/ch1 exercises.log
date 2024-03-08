@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  7 MAR 2024 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  7 MAR 2024 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,17 +416,17 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 [2]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 45.
- [3] [4] (ch1 exercises.aux)
+ [3] [4] [5] (ch1 exercises.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6429 strings out of 474485
- 96831 string characters out of 5743735
+ 6431 strings out of 474485
+ 96889 string characters out of 5743735
  1941542 words of memory out of 5000000
- 28610 multiletter control sequences out of 15000+600000
+ 28612 multiletter control sequences out of 15000+600000
  582695 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,15n,93p,1483b,218s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -434,21 +434,22 @@ Here is how much of TeX's memory you used:
 cmex10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmmi12.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/swhit/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/swhit/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/swhit/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/swhit/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
-swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C
+s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/swhit/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/swhit/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/swhit/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/swhit/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/s
+whit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 :/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/newtx/ztmb.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/newtx/ztmr.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/newtx/ztmri.pfb>
-Output written on "ch1 exercises.pdf" (4 pages, 212817 bytes).
+6.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/newtx/ztmb.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/font
+s/type1/public/newtx/ztmr.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/newtx/ztmri.pfb>
+Output written on "ch1 exercises.pdf" (5 pages, 227070 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
