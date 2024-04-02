@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  2 APR 2024 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.5)  2 APR 2024 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,7 +416,7 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 [2]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 45.
- [3] [4] [5] [6] (ch1 exercises.aux)
+ [3] [4] [5] [6] [7] (ch1 exercises.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -447,9 +447,9 @@ amsfonts/symbols/msbm10.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/newtx/ztmb.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/font
 s/type1/public/newtx/ztmr.pfb><C:/Users/swhit/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/newtx/ztmri.pfb>
-Output written on "ch1 exercises.pdf" (6 pages, 231787 bytes).
+Output written on "ch1 exercises.pdf" (7 pages, 238305 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
