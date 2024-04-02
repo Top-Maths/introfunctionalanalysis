@@ -69,10 +69,18 @@
 		 $$d(x_n, x) \leq d(x_n, x_{n_j}) + d(x_{n_j}, x) < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.$$ Hence, $\lim_{n \to \infty} x_n = x$ and we conclude that $(X, d)$ is complete.
 	\end{proof} 
 	
-\noindent \textbf{1.6.} Assume that you now Minkowski's inequality $$\left(\sum_{n = 1}^\infty |a_j + b_j|^2\right)^{1/2} \leq \left(\sum_{n = 1}^\infty |a_j|^2\right)^{1/2} + \left(\sum_{n = 1}^\infty |b_j|^2\right)^{1/2}$$ for $\mathbb{C}^n$ in the Euclidean norm. 
+\noindent \textbf{1.6.} Assume that you now Minkowski's inequality $$\left(\sum_{j = 1}^n |a_j + b_j|^2\right)^{1/2} \leq \left(\sum_{j = 1}^n |a_j|^2\right)^{1/2} + \left(\sum_{j = 1}^n |b_j|^2\right)^{1/2}$$ for $\mathbb{C}^n$ in the Euclidean norm. 
 	\begin{itemize}
 		\item[(a)] Show that for $\{a_n\}$ and $\{b_n\}$ in a weighted sequence space $\ell_\beta^2$, $$\left(\sum_{j = 0}^\infty |a_j + b_j|^2 \beta(j)^2\right)^{1/2} \leq \left(\sum_{j = 0}^\infty |a_j|^2 \beta(j)^2 \right)^{1/2} + \left(\sum_{j = 0}^\infty |b_j|^2 \beta(j)^2\right)^{1/2}$$ 
 		
 		\item[(b)] Verify directly that $\ell_\beta^2$ is complete. 
 	\end{itemize}
+	
+	\begin{proof} ~
+		\begin{itemize}
+			\item[(a)] For convenience, we recall the definition of $\ell_\beta^2$. For $\{\beta(n)\}_{n = 0}^\infty$ a sequence of positive numbers with $\beta(0) = 1$, $\lim_{n \to \infty} \beta(n)^{1/n} \geq 1$, we have $\{a_n\}_{n = 0}^\infty \in \ell_\beta^2$ if and only if $$\sum_{n = 0}^\infty |a_n|^2 \beta(n)^2 < \infty.$$ 
+			Suppose that $\{a_n\}, \{b_n\} \in \ell_\beta^2$ and define $\{a_n'\}$, $\{\beta_n'\}$ by setting $a_j' = a_j \beta(j)$, $b_j' = b_j \beta(j)$. For all $m \in \mathbb{N}$, we have by the given finite Minkowski inequality over $\mathbb{C}^m$: $$\left(\sum_{j = 1}^m |a_j' + b_j'|^2\right)^{1/2} \leq \left(\sum_{j = 1}^m |a_j'|^2\right)^{1/2} + \left(\sum_{j = 1}^m |b_j'|^2\right)^{1/2}.$$ Replacing $a_j', b_j'$ in terms of $a_j$ and $b_j$, we obtain the inequality $$\left(\sum_{j = 1}^m |a_j + b_j|^2\beta(j)^2\right)^{1/2} \leq \left(\sum_{j = 1}^m |a_j|^2 \beta(j)^2\right)^{1/2} + \left(\sum_{j = 1}^m |b_j|^2 \beta(j)^2\right)^{1/2}$$ for all $m \in \mathbb{N}$. 
+			\item[(b)] 
+		\end{itemize}
+	\end{proof}
 \end{document}
