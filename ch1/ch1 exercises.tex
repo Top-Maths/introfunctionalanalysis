@@ -92,6 +92,27 @@
 	\end{proof}
 	
 \noindent \textbf{1.7.} Let $x$ and $y$ be any two vectors in an inner product space and set $\lambda = \langle y, y \rangle$. Show that $$\lambda [\lambda \langle x, x\rangle - |\langle x, y \rangle|^2] = \langle \lambda x - \langle x, y\rangle y, \lambda x - \langle x, y \rangle y \rangle.$$ Use this to derive the Cauchy-Schwarz inequality and to determine when equality holds in the Cauchy-Schwarz inequality. 
+	\begin{proof}
+		By direct computation, we have,
+			\begin{align*}
+				\langle \lambda x - \langle x, y\rangle y, \lambda x - \langle x, y \rangle y \rangle &= \langle\lambda x, \lambda x - \langle x, y \rangle y\rangle - \langle \langle x, y \rangle y, \lambda x - \langle x, y \rangle y \rangle \\
+				&= \lambda \langle x, \lambda x - \langle x, y\rangle y \rangle - \langle x, y \rangle \langle y, \lambda x - \langle x, y\rangle y \rangle \\
+				&= \lambda \overline{\langle \lambda x - \langle x, y \rangle y, x\rangle} - \langle x, y \rangle \overline{\langle \lambda x - \langle x, y \rangle y, y\rangle} \\
+				&= \lambda (\overline{\lambda\langle  x, x \rangle - \langle x, y\rangle \langle y, x\rangle}) - \langle x, y \rangle (\overline{\lambda \langle x, y\rangle - \langle x, y\rangle \langle y, y \rangle}) \\
+				&= \lambda (\overline{\lambda} \langle x, x\rangle - |\langle x, y \rangle|^2) - \langle x, y \rangle (\lambda\langle y, x \rangle - \lambda \langle y, x\rangle ) \\
+				&= \lambda^2 \langle x, x\rangle - \lambda |\langle x, y\rangle|^2 - \lambda |\langle x, y \rangle|^2 + \lambda |\langle x, y \rangle|^2 \\
+				&= \lambda^2 \langle x, x\rangle - \lambda |\langle x, y \rangle|^2 \\
+				&= \lambda [\lambda\langle x, x \rangle - |\langle x, y \rangle|^2].
+			\end{align*}
+		Now, to derive the Cauchy-Schwarz inequality: Suppose $x, y \neq 0$, otherwise the inequality holds trivially. Note that by Definition 1.13(2), 
+			\begin{align*}
+				\langle \lambda x - \langle x, y \rangle y, \lambda x - \langle x, y \rangle y \rangle \geq 0 &\implies \lambda [\lambda \langle x, x \rangle - |\langle x, y \rangle|^2] \geq 0 \\
+				&\implies \lambda \langle x, x \rangle - |\langle x, y \rangle|^2 \geq 0\\ 
+				&\implies \lambda \langle x, x \rangle \geq |\langle x, y \rangle|^2 \\
+				&\implies \langle x, x \rangle \langle y, y \rangle \leq |\langle x, y \rangle|^2
+			\end{align*}
+		giving the result. Now, if $|\langle x, y \rangle|^2 = \langle x, x \rangle \langle y, y \rangle$, it follows that by the formula we've derived $$\langle \lambda x - \langle x, y \rangle y, \lambda x - \langle x, y \rangle y \rangle = 0.$$ By Definition 1.13(2), this implies that $\lambda x - \langle x, y \rangle y = 0$, or rather that $$x = \frac{\langle x, y \rangle}{\langle y, y\rangle} y$$ so that $x$ is a scalar multiple of $y$. So, for equality to hold, $x$ must be a scalar multiple of $y$. To show that this is sufficient, let $x = cy$ for some $c \in \mathbb{C}$. Then, $$\langle y, y \rangle \langle x, x \rangle - |\langle x, y \rangle|^2 = |c|^2 \langle x, x\rangle^2 - |c|^2 \langle x, x \rangle^2 = 0.$$ 
+	\end{proof}
 
 
 \noindent \textbf{Problem 1.8.} ~
